@@ -1,4 +1,5 @@
 {{ config(enabled=var('ad_reporting__pinterest_ads_enabled', True),
+    unique_key = ['source_relation','ad_group_id','advertiser_id','campaign_id','date_day'],
     partition_by={
       "field": "date_day", 
       "data_type": "TIMESTAMP",
